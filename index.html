@@ -21,7 +21,7 @@
 </head>
 <body class="transition" onload="init()">
     <div class="navbar transition centered">
-        <div id="nav1" class="nav-item transition" onclick="about()">About</div>
+        <div id="nav1" class="nav-item transition" onclick="switchLanguage()">About</div>
         <div id="nav2" class="nav-item transition" onclick="code()">Code</div>
         <div id="nav3" class="nav-item transition" onclick="design()">Design</div>
     </div>
@@ -33,9 +33,10 @@
         <div id="row1" class="detailsRow transition">Computer Science at TU Wien.</div>
         <div id="row2" class="detailsRow transition">Experience with Java, JS, HTML, CSS.</div>
         <div id="row3" class="detailsRow transition">Passion for Graphic Design.</div>
-        <div id="row4" class="detailsRow transition">Currently learning <span class="go transition" onclick="go()">Go</span>.</div>
+        <div id="row4" class="detailsRow transition">Currently learning Go.</div>
     </div>
-    <svg class="logo transition" id ="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="70" height="70" viewBox="0 0 70 70" onclick="switchThemeHelper()">
+    <div class="menu">
+      <svg class="logo transition" id ="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="70" height="70" viewBox="0 0 70 70" onclick="popup()">
         <defs>
           <style>
             .cls-1, .cls-2 {
@@ -65,6 +66,12 @@
           </g>
         </g>
       </svg>
+      <div class="popup transition">
+        <div class="theme popupButton transition" onclick="switchThemeHelper()">Light</div>
+        <div class="language popupButton transition" onclick="switchLanguage()">Catalan</div>
+      </div>
+    </div>
+   
    
 </body>
 </html>

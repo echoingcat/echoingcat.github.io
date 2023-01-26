@@ -170,20 +170,11 @@ body {
     opacity: 1;
 }
 
-.go:hover {
-    color:#50acd4;
-    cursor: pointer;
-}
-
 .logo {
-    position: absolute;
-    bottom: 10px;
-    left: 30px;
     opacity: 0;
 }
 
 .logo.active {
-    bottom: 30px;
     opacity: 1;
     user-select: initial;
     pointer-events: initial;
@@ -201,4 +192,60 @@ body {
 
 #Path_1 {
     fill: var(--white);
+}
+
+.menu {
+    position: absolute;
+    height: 70px;
+    width: 320px;
+    bottom: 30px;
+    left: 30px;
+    background-color: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu.active {
+    opacity: 1;
+    bottom: 30px;
+}
+
+.popup {
+    width: 250px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    opacity: 1;
+}
+
+.popupButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Aeonik';
+    font-weight: 400;
+    font-size: 16px;
+    background-color: var(--buttonFaded);
+    color: var(--white);
+    height: 50px;
+    width: 100px;
+    padding-bottom: 3px;
+    border-radius: 400px;
+    opacity: 0;
+    margin-top: 20px;
+}
+
+.popupButton.active {
+    opacity: 1;
+    margin-top: 0px;
+}
+
+.popupButton:hover {
+    cursor: pointer;
+    box-shadow: 0px 8px 14px var(--boxshadow);
+    transform: translateY(-1px);
+    cursor: pointer;
+    transition: all 0.15s;
+    animation-timing-function: cubic-bezier(.74, -0.01, .26, 1.04);
 }
