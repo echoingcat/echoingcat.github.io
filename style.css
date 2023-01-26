@@ -1,0 +1,204 @@
+:root {
+    --black: #090909;
+    --white: #FFFFFF;
+    --buttonFaded: #222222;
+    --textFaded: #535353;
+    --boxshadow: #000000;
+    --boxshadowActive: #ffffff0a;
+}
+
+[data-theme="dark"] {
+    --black: #FFFFFF;
+    --white: #090909;
+    --buttonFaded: #E4E4E4;
+    --textFaded: #B2B2B2;
+    --boxshadow: #0000000a;
+    --boxshadowActive: #00000021;
+}
+
+@font-face {
+    font-family: 'Aeonik';
+    src: url("/Assets/Aeonik-Medium.otf");
+    font-style: normal;
+    font-weight: 400;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: var(--black);
+}
+
+.transition {
+    transition: all 0.3s;
+    animation-timing-function: cubic-bezier(.74, -0.01, .26, 1.04);
+}
+
+::selection {
+    background: var(--textFaded);
+}
+
+.navbar {
+    width: 800px;
+    height: 89px;
+    top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+
+.centered {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: none;
+}
+
+.nav-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Aeonik';
+    font-weight: 400;
+    font-size: 33px;
+    background-color: var(--buttonFaded);
+    color: var(--white);
+    height: 89px;
+    width: 230px;
+    padding-bottom: 3px;
+    border-radius: 400px;
+    margin-top: 20px;
+    opacity: 0;
+}
+
+.nav-item.visible {
+    margin-top: 0px;
+    opacity: 1;
+}
+
+.nav-item.active {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.nav-item.active:hover {
+    box-shadow: 0px 12px 19px var(--boxshadowActive);
+    transform: translateY(-2px);
+    cursor: pointer;
+    transition: all 0.15s;
+    animation-timing-function: cubic-bezier(.74, -0.01, .26, 1.04);
+}
+
+.nav-item:hover {
+    box-shadow: 0px 12px 19px var(--boxshadow);
+    transform: translateY(-2px);
+    cursor: pointer;
+    transition: all 0.15s;
+    animation-timing-function: cubic-bezier(.74, -0.01, .26, 1.04);
+}
+
+.infoContainer {
+    width: 800px;
+    height: 150px;
+    top: 350px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: left;
+}
+
+.name {
+    height: 90px;
+    width: 100%;
+    background-color: none;
+    font-family: 'Aeonik';
+    font-size: 90px;
+    color: var(--white);
+    line-height: 90px;
+    margin-top: 20px;
+    opacity: 0;
+}
+
+.handle {
+    height: 60px;
+    background-color: none;
+    font-family: 'Aeonik';
+    font-size: 50px;
+    color: var(--textFaded);
+    line-height: 60px;
+    margin-top: 10px;
+    opacity: 0;
+}
+
+.name.visible {
+    margin-top: 0px;
+    opacity: 1;
+}
+
+.handle.visible {
+    margin-top: 0px;
+    opacity: 1;
+}
+
+.detailsContainer {
+    height: 212px;
+    width: 800px;
+    top: 600px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: left;
+}
+
+.detailsRow {
+    height: 53px;
+    background-color: none;
+    font-family: 'Aeonik';
+    font-size: 35px;
+    color: var(--white);
+    line-height: 53px;
+    margin-top: 10px;
+    opacity: 0;
+}
+
+.detailsRow.visible {
+    margin-top: 0px;
+    opacity: 1;
+}
+
+.go:hover {
+    color:#50acd4;
+    cursor: pointer;
+}
+
+.logo {
+    position: absolute;
+    bottom: 10px;
+    left: 30px;
+    opacity: 0;
+}
+
+.logo.active {
+    bottom: 30px;
+    opacity: 1;
+    user-select: initial;
+    pointer-events: initial;
+}
+
+.logo:hover {
+    cursor: pointer;
+    transform: rotate(20deg);
+}
+
+#Ellipse_2 {
+    fill: var(--white);
+    opacity: 0.05;
+}
+
+#Path_1 {
+    fill: var(--white);
+}
