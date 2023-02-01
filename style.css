@@ -306,6 +306,12 @@ body {
         line-height: 45px;
     }
 
+    .menu {
+        position: absolute;
+        top: 720px;
+        left: 30px;
+    }
+
 
 }
 
@@ -365,5 +371,60 @@ body {
         font-size: 22px;
         line-height: 40px;
     }
+
+    .menu {
+        position: absolute;
+        top: 620px;
+        left: 5px;
+        transform: scale(0.8);
+    }
 }
 
+@media only screen and (max-width: 420px) {
+    .navbar {
+        width: 98%;
+        top: 50px;
+        padding: 0;
+    }
+
+    .infoContainer {
+        width: 98%;
+        height: 100px;
+        top: 190px;
+    }
+
+    .detailsContainer {
+        width: 98%;
+        height: 160px;
+        top: 340px;
+    }
+
+    .nav-item {
+        font-size: 18px;
+        height: 55px;
+        width: 110px;
+    }
+
+    .name {
+        font-size: 45px;
+        line-height: 45px;
+    }
+    
+    .handle {
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    .detailsRow {
+        height: 40px;
+        font-size: 20px;
+        line-height: 40px;
+    }
+
+    .menu {
+        position: absolute;
+        top: 550px;
+        left: -25px;
+        transform: scale(0.8);
+    }
+}
