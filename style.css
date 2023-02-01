@@ -48,6 +48,8 @@ body {
     display: flex;
     align-items: center;
     justify-content:space-between;
+    padding-left: 130px;
+    padding-right:130px
 }
 
 .centered {
@@ -109,6 +111,8 @@ body {
     flex: 1;
     flex-direction: column;
     align-items: left;
+    padding-left: 130px;
+    padding-right:130px
 }
 
 .name {
@@ -152,6 +156,8 @@ body {
     flex: 1;
     flex-direction: column;
     align-items: left;
+    padding-left: 130px;
+    padding-right:130px
 }
 
 .detailsRow {
@@ -195,7 +201,7 @@ body {
 }
 
 .menu {
-    position: absolute;
+    position: fixed;
     height: 70px;
     width: 320px;
     bottom: 30px;
@@ -203,6 +209,11 @@ body {
     background-color: none;
     display: flex;
     justify-content: space-between;
+    border-radius: 20px;
+    transition: all 0.15s;
+    animation-timing-function: cubic-bezier(.74, -0.01, .26, 1.04);
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .menu.active {
@@ -253,3 +264,106 @@ body {
     transition: all 0.15s;
     animation-timing-function: cubic-bezier(.74, -0.01, .26, 1.04);
 }
+
+@media only screen and (max-width: 1060px) {
+
+    .navbar {
+        width: 600px;
+        top: 65px;;
+    }
+
+    .infoContainer {
+        width: 600px;
+        height: 130px;
+        top: 275px;
+    }
+
+    .detailsContainer {
+        width: 600px;
+        height: 180px;
+        top: 475px;
+    }
+
+    .nav-item {
+        font-size: 26px;
+        height: 73px;
+        width: 175px;
+    }
+
+    .name {
+        font-size: 75px;
+        line-height: 75px;
+    }
+    
+    .handle {
+        font-size: 43px;
+        line-height: 43px;
+    }
+
+    .detailsRow {
+        height: 45px;
+        font-size: 30px;
+        line-height: 45px;
+    }
+
+
+}
+
+@media only screen and (max-width: 734px) {
+    .navbar {
+        padding-left: 10px;
+        padding-right:10px
+    }
+
+    .infoContainer {
+        padding-left: 10px;
+        padding-right:10px
+    }
+
+    .detailsContainer {
+        padding-left: 10px;
+        padding-right:10px
+    }
+}
+
+@media only screen and (max-width: 630px) {
+    .navbar {
+        width: 400px;
+        top: 50px;
+    }
+
+    .infoContainer {
+        width: 400px;
+        height: 100px;
+        top: 220px;
+    }
+
+    .detailsContainer {
+        width: 400px;
+        height: 160px;
+        top: 400px;
+    }
+
+    .nav-item {
+        font-size: 18px;
+        height: 60px;
+        width: 120px;
+    }
+
+    .name {
+        font-size: 50px;
+        line-height: 50px;
+    }
+    
+    .handle {
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    .detailsRow {
+        height: 40px;
+        font-size: 22px;
+        line-height: 40px;
+    }
+}
+
