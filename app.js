@@ -5,6 +5,7 @@ function init() {
         document.documentElement.setAttribute('data-theme', 'light');
     }
     document.documentElement.setAttribute('language', 'english');
+    localStorage.setItem('language', 'english')
     removeNavActive();
     $('#nav1').addClass('active');
     setTimeout(addAbout, 600);
